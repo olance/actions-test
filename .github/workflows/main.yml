@@ -20,7 +20,7 @@ jobs:
     - name: Run Black
       uses: lgeiger/black-action@v1.0.1
       with:
-        args: alma
+        args: .
       
     - name: Commit changes
       run: |
