@@ -1,4 +1,4 @@
-name: Black
+name: Format with isort and Black
 
 on:
   pull_request:
@@ -14,10 +14,13 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       
+    - name: Run isort
+      uses: olance/isort-action@v1.0.0
+      
     - name: Run Black
       uses: lgeiger/black-action@v1.0.1
       with:
-        args: .
+        args: alma
       
     - name: Commit changes
       run: |
